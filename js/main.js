@@ -1,3 +1,8 @@
 function init(){
+  document.getElementById("modaltest").onclick = function() {
+    var divid = document.getElementById("speedwalkdiv");
+    divid.innerHTML = ""
+    divid.innerHTML = "7e4s2es2eds"
+  }
 }
 window.onload=init;
