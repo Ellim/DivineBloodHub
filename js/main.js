@@ -8,9 +8,6 @@ function init(){
     if ($('#abysswell').hasClass('hidden')) {
 		$('#abysswell').removeClass('hidden');
 	  }
-	  if (!$('#abysswell').hasClass('hidden')) {
-		$('#abysswell').addClass('hidden');
-	  }
   }
 }
 window.onload=init;
