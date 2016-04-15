@@ -29,5 +29,10 @@ function updateWell(area) {
 			divid.innerHTML = ""
 			divid.innerHTML = "3w;open west;11ws2w2sws10ws;SW<br /><span class='text-primary'>NE;n10ene2n2en10e;open east;4e</span>"
 			break;
+		case "Ancient Fens":
+			var divid = document.getElementById("swalk");
+			divid.innerHTML = ""
+			divid.innerHTML = "<span class='text-success'>s2e2s6wnws</span><br /><span class='text-primary'>nes6e2n2wn</span>"
+			break;
 	}
 }
