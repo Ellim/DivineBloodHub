@@ -9,7 +9,9 @@ function init(){
   }
   $('.selectpicker').on('change', function(){
     var selected = $(this).find("option:selected").val();
-    alert(selected);
+    var swdiv = document.getElementById("swalk")
+    swdiv.innerHTML = ""
+    swdiv.innerHTML = selected
   });
 }
 window.onload=init;
