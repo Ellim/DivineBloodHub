@@ -7,5 +7,9 @@ function init(){
     divid.innerHTML = ""
     divid.innerHTML = "3w;open west;11ws2w2sws7w3swd<br /><span class='text-primary'>ue3n7ene2n2en10e;open east;4e</span>"
   }
+  $('.selectpicker').on('change', function(){
+    var selected = $(this).find("option:selected").val();
+    alert(selected);
+  });
 }
 window.onload=init;
