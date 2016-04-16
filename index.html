@@ -25,9 +25,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
-
-
-
+<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
 <div class="container-fluid">
 		<div class="row" style="height:vh5">
 			<div class="col-xs-6">
@@ -47,7 +45,7 @@
 				<li role="presentation"><a href="#speedwalklist" aria-controls="speedwalklist" role="tab" data-toggle="tab" class="" id="swtab">Speedwalks <span class="badge">82</span></a></li>
 				<li role="presentation"><a href="#arealist" aria-controls="arealist" role="tab" data-toggle="tab" class="" id="areatab">Area List <span class="badge">103</span></a></li>
 				<li role="presentation"><a href="#clanlist" aria-controls="clanlist" role="tab" data-toggle="tab" class="" id="clantab">Clans <span class="badge">11</span></a></li>
-				<li role="presentation"><a href="#linklist" aria-controls="linklist" role="tab" data-toggle="tab" class="" id="linktab">Links <span class="badge">4</span></a></li>
+				<li role="presentation"><a href="#linklist" aria-controls="linklist" role="tab" data-toggle="tab" class="" id="linktab">Links <span class="badge">5</span></a></li>
 			</ul>
 		</div>
 		
@@ -148,7 +146,7 @@
 			
 			<div role="tabpanel" class="tab-pane fade in" id="arealist">
 			<span class="text-warning">Click a column to sort!</span><br />
-				<table data-sortable class="text-center">
+				<table data-sortable class="text-center" id="areatable">
 					<thead><tr><th>Lower Level Range</th><th>Upper Level Range</th><th class="text-center">Creator</th><th class="text-center">Area Name</th><th>Alignment</th></tr></thead><tbody>
 					<tr><td>92</td><td>100</td><td>Talanvor</td><td>Immortal Home</td><td>N</td></tr>
 					<tr><td>1</td><td>91</td><td><span style="color:#ffff00">L</span><span style="color:#ffffff">IGH</span><span style="color:#ffff00">T</span></td><td>Caerdroia</td><td>G</td></tr>
@@ -258,7 +256,7 @@
 				
 			<div role="tabpanel" class="tab-pane fade" id="clanlist">
 			<span class="text-warning">Click a column to sort!</span><br />
-				<table data-sortable class="text-center">
+				<table data-sortable class="text-center" id="clantable">
 					<thead><tr><th class="text-center">Clan</th><th class="text-center">Full Name</th><th class="text-center">Members</th><th class="text-center">Leader</th></tr></thead><tbody>
 					<tr><td><span style="color:#ffffff">STEEL</span></td><td>Brotherhood of Steel</td><td>7</td><td>Dramlor</td></tr>
 					<tr><td><span style="color:#ffff00">L</span><span style="color:#ffffff">IGH</span><span style="color:#ffff00">T</span></td><td>Legions of the Light</td><td>11</td><td>Bronwyn</td></tr>
@@ -275,12 +273,15 @@
 				</table>
 			</div>
 			
+			
 			<div role="tabpanel" class="tab-pane fade" id="linklist">
 				<span class="text-warning">If you have any other Divine Blood related links I'd love to add them!</span><br />
 				<a class="text-primary" href="http://www.divineblood.info/">Divine Blood MUD Info</a><span> - If anyone knows who runs this site please let me know!</span><br />
 				<a class="text-primary" href="https://www.facebook.com/pages/Divine-Blood-MUD/200858709947792">Divine Blood Facebook</a><br />
 				<a class="text-primary" href="http://ravaan.tripod.com/Light/"><span style="color:#ffff00">L</span><span style="color:#ffffff">IGH</span><span style="color:#ffff00">T</span></a><span> - Legion of Light clansite.</span><br />
 				<a class="text-primary" href="http://www.angelfire.com/tn/Pavilion/">Arath's Place</a><span> - Arathorne's old site.</span><br />
+				<a class="text-primary" href="https://docs.google.com/spreadsheets/d/1g4hPLy4wMY6OjdKh808sjSzMZJSyrEKwbMrCUozwxCc/edit?usp=sharing" target="_blank">Equipment Database</a> - <span class="text-danger">Slowly</span> being updated. Turn on Temporary filters and it should work like Excel.<br />
+
 			</div>
 			
 		</div>
@@ -307,4 +308,13 @@
 
 <script src="js/main.js"></script>
 <script src="js/sortable.min.js"></script>
+<script src="js/dataTables.bootstrap.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+
+
+<script type="javascript">
+$(document).ready(function() {
+    $('#armortable').DataTable();
+} );
+</script>
 </body>

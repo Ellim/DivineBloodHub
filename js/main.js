@@ -1,5 +1,5 @@
 function init(){
-  $('.selectpicker').on('change', function(){
+	$('.selectpicker').on('change', function(){
     var selected = $(this).find("option:selected").val();
     updateWell(selected);
   });
@@ -426,3 +426,7 @@ function updateWell(area) {
 			break;
 	}
 }
+
+
+
+
